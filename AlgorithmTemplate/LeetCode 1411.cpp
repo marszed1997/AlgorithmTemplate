@@ -1,4 +1,5 @@
 //https://leetcode-cn.com/problems/number-of-ways-to-paint-n-x-3-grid/
+// ¾ØÕó¿ìËÙÃÝ
 
 #include<cmath>
 #include<cstdio>
@@ -41,9 +42,9 @@ public:
 		if (n == 1) 
 			return 12;
 		matrixFastPow(n - 1, mod);
-		int x = ((ans[0][0] * 6) % mod + (ans[0][1] * 6) % mod) % mod;
-		int y = ((ans[1][0] * 6) % mod + (ans[1][1] * 6) % mod) % mod;
-		return (LL)((x + y) % mod);
+		LL x = ((ans[0][0] * 6) % mod + (ans[0][1] * 6) % mod) % mod;
+		LL y = ((ans[1][0] * 6) % mod + (ans[1][1] * 6) % mod) % mod;
+		return (int)((x + y) % mod);
 	}
 };
 
